@@ -6,9 +6,6 @@ df = pd.read_csv("Fruit-Prices-2022.csv")
 # Clean column names (remove leading/trailing spaces)
 df.columns = df.columns.str.strip()
 
-# Optional: Print column names to verify
-# print(df.columns.tolist())
-
 # === Query 1: Fresh fruit with highest cup equivalent price ===
 print("=== Query 1: Fresh fruit with highest cup equivalent price ===")
 q1 = df[df['Form'] == 'Fresh'].sort_values('CupEquivalentPrice', ascending=False).head(1)
